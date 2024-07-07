@@ -1,0 +1,19 @@
+#main{
+
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+#brand{
+    height: auto;
+    width: 400px;
+    border: 2px solid red;
+    margin-left: 30px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+img{
+    height: 300px;
+    width: 300px;
+}
