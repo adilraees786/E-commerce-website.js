@@ -30,10 +30,32 @@ const obj =  [{ "id": 1, "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15
             add.innerHTML +=  `<div id ="brand">
             <img src="${obj[i].image}" alt="">
             <h1>${obj[i].title}</h1>
-            <p>${obj[i].category}</p>
+            <h4>${obj[i].category}</h4>
             <h2> price:${obj[i].price}$</h2>
             <p>${obj[i].description}</p>
             <h5>${obj[i].rating.rate}</h5>
         </div>`
                     
         }
+
+        function searchThing() {
+            let search = document.getElementById('search').value.toUpperCase();
+            let item = document.querySelectorAll('#brand')
+            let l = document.getElementsByTagName('h4')
+            for (let i = 0; i <= l.length; i++) {
+                let a = item[i].getElementsByTagName('h4')[0]
+                let value = a.innerHTML || a.innerText || a.textContent
+                if (value.toUpperCase().indexOf(search) >-1) {
+                    item[i].style.display = 'block'
+                }
+                else{
+                    item[i].style.display = 'none'
+        
+                }
+                
+            }
+           
+        }
+        
+        displayCards()
+
